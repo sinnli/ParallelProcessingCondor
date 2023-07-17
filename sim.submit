@@ -1,0 +1,17 @@
+# Submit Description File:
+# file name is sim.submit
+# (Lines beginning with # are comments)
+# NOTE: the words on the left side are not
+# case sensitive, but file names are!
+
+# 1 cluster  200 procces 
+universe = vanilla
+executable = pp.py
+Arguments = $(Process)
+output =  output$(Process).txt 
+log = sim.log  			#saves the life story of the jobs
+InitialDir = run
+queue 200
+
+
+#creating a subdirectory for all files 
